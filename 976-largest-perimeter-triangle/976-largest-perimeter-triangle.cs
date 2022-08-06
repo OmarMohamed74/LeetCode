@@ -5,8 +5,10 @@ public class Solution {
         
         Array.Sort(nums);
         
-        for (int i=nums.Length-3; i>=0;i--){
-            if(nums[i]+nums[i+1]>nums[i+2]){
+        for (int i=nums.Length -3; i>=0;i--){
+            var numbersChecked =nums[i]+nums[i+1]>nums[i+2];
+            
+            if(numbersChecked){
                 return (nums[i]+nums[i+1]+nums[i+2]);
             }
         }
